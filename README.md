@@ -17,7 +17,6 @@ Udacity datascience project 2: A webapp to classify messages using a ML (machine
 
 ### Important Files
 
-./
     - ./app
         - run.py: Flask server to run the webapp
         - templates/: folder for html to render the webapp
