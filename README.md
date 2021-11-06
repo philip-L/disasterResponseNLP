@@ -3,7 +3,7 @@
 Udacity datascience project 2: A webapp to classify messages using a ML (machine learning) model trained on multi-labelled data, with NLP (natural language processing) techniques.
 
 ### Instructions:
-1. Download python (this project uses version 3.7.4)
+1. Download python (this project uses version 3.7.4) and this repository
 3. Run the following commands in the project's root directory to set up your database and model.
 
     - To install all the dependencies
