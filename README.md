@@ -1,6 +1,8 @@
 # Disaster Response Pipeline Project
 
-Udacity datascience project 2: A webapp to classify messages using a ML (machine learning) model trained on multi-labelled data, with NLP (natural language processing) techniques.
+Udacity datascience project 2: A webapp to classify messages using a simple ML (machine learning) model trained on multi-labelled data, with simple NLP (natural language processing) techniques. 
+
+Message classification has many applications. In the event of a disaster, triaging and classifying messages is helpful for organizations and individuals. 
 
 ### Instructions:
 1. Download python (this project uses version 3.7.4) and this repository
