@@ -24,7 +24,6 @@ def load_data(database_filepath):
     engine = create_engine(f'sqlite:///{database_filepath}')
     df = pd.read_sql_table('messageCategories',engine)
     df = df.dropna()
-    df = df.related[df.related != 2]
     X = df['message']
     y = df.loc[:,'related':]
     category_names = y.columns
