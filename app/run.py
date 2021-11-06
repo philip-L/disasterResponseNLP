@@ -37,7 +37,7 @@ engine = create_engine('sqlite:///../data/DisasterResponse.db')
 df = pd.read_sql_table('messageCategories', engine)
 
 # load model
-model = joblib.load("../models/classifier.pkl")
+model = joblib.load("../models/classifier.pkl") #  the model needs the tokenize function in this file (spooky)
 
 
 # index webpage displays cool visuals and receives user input text for model
@@ -125,6 +125,7 @@ def go():
 
 
 def main():
+    """run Flask app"""
     app.run(host='0.0.0.0', port=3001, debug=True)
 
 

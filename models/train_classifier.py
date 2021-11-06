@@ -24,6 +24,7 @@ def load_data(database_filepath):
     engine = create_engine(f'sqlite:///{database_filepath}')
     df = pd.read_sql_table('messageCategories',engine)
     df = df.dropna()
+    df = df.related[df.related != 2]
     X = df['message']
     y = df.loc[:,'related':]
     category_names = y.columns
@@ -53,7 +54,11 @@ def build_model():
         ('tfidf', TfidfTransformer()),
         ('clf', MultiOutputClassifier(RandomForestClassifier()))
     ])
-    return pipeline
+    parameters = {  'clf__estimator__n_estimators': [10, 20],
+                'clf__estimator__min_samples_split': [2, 5]
+             }
+    cv = GridSearchCV(pipeline, param_grid=parameters)
+    return cv
 
 
 def evaluate_model(model, X_test, Y_test, category_names):
@@ -75,6 +80,7 @@ def evaluate_model(model, X_test, Y_test, category_names):
     print("Accuracy:\n", accuracy)
 
 def save_model(model, model_filepath):
+    """save model as pickle file"""
     pickle.dump(model, open(model_filepath, 'wb'))
 
 
