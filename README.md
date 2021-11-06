@@ -7,7 +7,7 @@ Udacity datascience project 2: A webapp to classify messages using a ML (machine
 3. Run the following commands in the project's root directory to set up your database and model.
 
     - To install all the dependencies
-        `pip install requirements.txt`
+        `pip install -r requirements.txt`
     - To run ETL (extraction-transform-load) pipeline that cleans data and stores in database
         `python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db`
     - To run ML pipeline that trains classifier and saves
